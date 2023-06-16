@@ -1,11 +1,11 @@
-About devpi-process
-===================
+About devpi-process-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/devpi-process-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tox-dev/devpi-process
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/devpi-process-feedstock/blob/main/LICENSE.txt)
 
 Summary: devpi process provides a programmatic API to create and use a devpi server process
 

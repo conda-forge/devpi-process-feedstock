@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: devpi-process
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/devpi-process/devpi_process-{{ version }}.tar.gz
-  sha256: e4dc9e19ac4fc55e7f2dab8a4d05ce44319a4cd8b6ee76ec71b897cb8466ab90
+  sha256: 18cb93b430d560a40bf0e11136dfff4eb5edf665d3c49cd1b0ab5d8b11675a6e
 
 build:
   noarch: python
@@ -16,13 +16,14 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.3
-    - hatchling >=1.14.1
-    - python >=3.7
+    - hatchling >=1.18
     - pip
+    - python >=3.8
   run:
-    - python >=3.7
-    - devpi-client >=6.0.4
-    - devpi-server >=6.8
+    - devpi-client >=6.0.5
+    - devpi-server >=6.9.2
+    - python >=3.8
+    - typing_extensions >=4.7.1
 
 test:
   imports:

@@ -15,15 +15,15 @@ build:
 
 requirements:
   host:
-    - hatch-vcs >=0.3
-    - hatchling >=1.18
+    - hatch-vcs >=0.4
+    - hatchling >=1.25
     - pip
     - python >=3.8
   run:
-    - devpi-client >=6.0.5
-    - devpi-server >=6.9.2
+    - devpi-client >=7.1
+    - devpi-server >=6.12.1
     - python >=3.8
-    - typing_extensions >=4.7.1
+    - typing_extensions >=4.12.2.1
 
 test:
   imports:

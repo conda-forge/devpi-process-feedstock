@@ -5,24 +5,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/devpi-process/devpi_process-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/devpi-process/devpi_process-{{ version }}.tar.gz
   sha256: 412fdc7c28c38f0c9cf3487242bdb6800eeecec1dbf31f67140e59a0178a466c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - hatch-vcs >=0.4
     - hatchling >=1.25
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - devpi-client >=7.1
     - devpi-server >=6.12.1
-    - python >=3.8
+    - python >={{ python_min }}
     - typing_extensions >=4.12.2
 
 test:
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tox-dev/devpi-process

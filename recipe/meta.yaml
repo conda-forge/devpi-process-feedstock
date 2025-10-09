@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 package:
   name: devpi-process
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/devpi-process/devpi_process-{{ version }}.tar.gz
-  sha256: 412fdc7c28c38f0c9cf3487242bdb6800eeecec1dbf31f67140e59a0178a466c
+  sha256: 9bdb23f6cd8360337083033d861d8931bb2e0194331dfa355d2d3270b078f3a4
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:

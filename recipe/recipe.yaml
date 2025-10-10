@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
   sha256: 9bdb23f6cd8360337083033d861d8931bb2e0194331dfa355d2d3270b078f3a4
 
 build:

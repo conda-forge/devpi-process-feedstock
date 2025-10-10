@@ -9,8 +9,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/9bdb23f6cd8360337083033d861d8931bb2e0194331dfa355d2d3270b078f3a4/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
-  sha256: d2087df90457cc95e5220dddfba96fae7367aa6e8ad25fa819b1088ff5f62502
+  url: https://pypi.io/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
+  sha256: 9bdb23f6cd8360337083033d861d8931bb2e0194331dfa355d2d3270b078f3a4
 
 build:
   number: 0

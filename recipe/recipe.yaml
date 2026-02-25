@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 1.1.0
+  version: "1.1.1"
 
 package:
   name: devpi-process
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
-  sha256: 9bdb23f6cd8360337083033d861d8931bb2e0194331dfa355d2d3270b078f3a4
+  sha256: 85a7a681a9114196665520dc8539b18b9e02e44de5e012af440f45a3fc15a239
 
 build:
   number: 0

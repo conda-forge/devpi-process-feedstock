@@ -3,6 +3,7 @@ schema_version: 1
 
 context:
   version: "1.1.1"
+  python_check_max: "3.14"
 
 package:
   name: devpi-process
@@ -21,7 +22,7 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.5
-    - hatchling >=1.27
+    - hatchling >=1.28
     - pip
     - python ${{ python_min }}.*
   run:
@@ -37,13 +38,14 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.14.*
+        - ${{ python_check_max }}.*
 
 about:
   summary: devpi process provides a programmatic API to create and use a devpi server process
   license: MIT
   license_file: LICENSE.txt
-  homepage: https://github.com/tox-dev/devpi-process
+  homepage: https://pypi.org/project/devpi-process
+  repository: https://github.com/tox-dev/devpi-process
 
 extra:
   recipe-maintainers:

@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.2.0"
+  version: "1.3.0"
   python_check_max: "3.14"
 
 package:
@@ -10,29 +10,32 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
-  sha256: ab6b6058933e25e4b9e3bd6ef8fe82808f92842dc06bc009ba124d6d28ac9079
+  url: https://files.pythonhosted.org/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
+  sha256: 5fcfbd812ae70d04cff39414e7eaa930bbc8ff6f4a6f6476d7ae039b9a125c74
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
     - hatch-vcs >=0.5
-    - hatchling >=1.28
+    - hatchling >=1.32.4
     - pip
     - python ${{ python_min }}.*
   run:
-    - devpi-client >=7.2
-    - devpi-server >=6.17
+    - devpi-client >=7.3
+    - devpi-server >=6.20.3
     - python >=${{ python_min }}
-    #  python_version<'3.11'
-    - typing_extensions >=4.15
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - devpi_process/**
+        - devpi_process-${{ version }}.dist-info/**
   - python:
       imports: devpi_process
       pip_check: true

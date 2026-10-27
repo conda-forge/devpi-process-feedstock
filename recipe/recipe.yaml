@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.3.1"
+  version: "1.3.2"
   python_check_max: "3.15"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/d/devpi-process/devpi_process-${{ version }}.tar.gz
-  sha256: 2a5186b1a04ce39b8f16b8216f48051c64dc725aff76b971d0b708c3b5116827
+  sha256: e95929aff5bc1c24913fb715fcc87027024af9a5077d73bead4e16494719a010
 
 build:
   number: 0
@@ -21,6 +21,7 @@ build:
 
 requirements:
   host:
+    - hatch-fancy-pypi-readme >=25.1
     - hatch-vcs >=0.5
     - hatchling >=1.32.4
     - pip

@@ -26,6 +26,7 @@ requirements:
     - hatchling >=1.32.4
     - pip
     - python ${{ python_min }}.*
+    - python-sbom >=0.1.2
   run:
     - devpi-client >=7.3
     - devpi-server >=6.20.3
